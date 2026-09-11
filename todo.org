@@ -1,0 +1,24 @@
+#+TITLE: List of Data Structures to Implement
+/The goal is to do one a day/
+- [X] Queue
+- [ ] Smart pointers
+- Hashing data structures [0/2]
+  - [ ] Hash map
+  - [ ] Hash set
+- [ ] Resizing array
+- [ ] Deque
+- [ ] SLL List
+- [ ] DLL List
+- [ ] Heaps
+- [ ] Type-safe tagged union (variant)
+- Type erased stuff [0/2]
+  - [ ] Function
+  - [ ] Any
+- Concurrent data structures [0/3]
+  - [ ] SPSC Queue
+  - [ ] MPMC Queue
+  - [ ] Concurrent List
+- [ ] Stack
+- Binary Trees [0/2]
+  - [ ] AVL Trees
+  - [ ] Red black tree
