@@ -1,0 +1,4 @@
+* What is this
+My reference implementations for containers and data structures that are commonly used across C++.
+
+Ideally, each implementation will be accompanied by some testing, benchmarking, and technical discussion. This is good practice.
