@@ -1,0 +1,18 @@
+* Background on queues in C++
+
+When we discuss a queue, we are referring to a FIFO container -- that is, a container which provides constant access and insertion for the two different tail ends of the underlying data.
+
+* Implementations
+
+** Ring Buffer
+
+The intuitive way to implement this, is over a buffer, either fixed size or dynamically sized (in this case, the only thing that changes is some overhead for the dynamic case, but this is amortized).
+This leads us to the ring buffer. It boils down to tracking two indices: one that refers to the next address that we will read from -- semantically, the *front* of the queue -- and one that refers to the next address that we will write to -- the rear of the queue, or the tail (sort of like how people queue up in a line at a fast food chain).
+
+This is the technique that I use for my implementation, in ~queue.hpp~.
+
+Note that in the dynamic case, it is a bit more complex since we need to actively track the changing capacity of the underlying dynamically sized buffer. For this reason, maybe it is better to do the resizing by hand, instead of using a ~std::vector~ which would require you to explicitly check its capacity with every write.
+
+** Linked List
+
+In this case, we do not use a buffer but rather implement as a structure over some list nodes. Fundamentally, it’s similar since we also track a head and tail of the linked list, however this queue’s size can grow indefinitely, as each individual node is dynamically allocated. Of course, there is overhead introduced with repeated dynamic allocations, at least in a basic implementation, as opposed to a ring buffer which either allocates once or continuously less and less (considering the exponential growth factor). The downsides of repeated memory allocations are also probably addressable through memory pools and other techniques, though.
