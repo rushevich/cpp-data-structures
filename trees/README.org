@@ -1,0 +1,19 @@
+#+TITLE: Background on Various Tree-based data structures
+
+Primary reference: [[https://www.cs.mcgill.ca/~akroit/math/compsci/Cormen%20Introduction%20to%20Algorithms.pdf]]
+
+
+** Red-black trees
+Data structure that is approximately balanced to gaurantee basic "dynamic-set" operations tag ~O(log n)~ in the worst case.
+
+Each node can either be /red/ or /black/ -- this is effectively just an extra piece of data per node. The balancing is achieved by constraining the amount of specifically-colored nodes among any path from a root to a leaf node, such that all no path is any more than twice as long as another. (approximately balanced)
+
+The properties of a red-black tree are as follows:
+1) Every node is either red or black
+2) The root is black
+3) Every leaf (nil / nullptr) node is black
+4) if a node is red, then both its children are black
+5) for each node, all simple paths from the node to descendant leaves contain the same number of black nodes
+
+An important definition is the *black height* of a node, which refers to the number of black nodes in a path from, but not including, a node /x/ down to any leaf node.
+This is written as ~bh(x)~. It follows that the black height of a red black tree is the black height of its root node.

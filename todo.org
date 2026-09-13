@@ -1,7 +1,8 @@
 #+TITLE: List of Data Structures to Implement
+#+AUTHOR: George Rushevich
 /The goal is to do one a day/
-- [X] Queue
-- [ ] Smart pointers
+- [ ] Queue :: Did ring-buffer version - still have to do LL 
+- [ ] Smart pointers :: did unique_ptr
 - Hashing data structures [0/2]
   - [ ] Hash map
   - [ ] Hash set
@@ -19,6 +20,6 @@
   - [ ] MPMC Queue
   - [ ] Concurrent List
 - [ ] Stack
-- Binary Trees [0/2]
+- Binary Trees [1/2]
   - [ ] AVL Trees
-  - [ ] Red black tree
+  - [X] Red black tree
