@@ -1,0 +1,88 @@
+Language: Cpp
+BasedOnStyle: LLVM
+Standard: Latest
+
+# Indentation
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ContinuationIndentWidth: 4
+AccessModifierOffset: -4
+IndentCaseLabels: true
+IndentPPDirectives: AfterHash
+NamespaceIndentation: None
+IndentWrappedFunctionNames: false
+ColumnLimit: 100
+
+# East const (and consistent specifier order)
+QualifierAlignment: Custom
+QualifierOrder: [inline, static, constexpr, type, const, volatile]
+
+# Braces
+BreakBeforeBraces: Attach
+InsertBraces: true
+
+# Pointers and references
+PointerAlignment: Left
+ReferenceAlignment: Pointer
+DerivePointerAlignment: false
+
+# Line breaking
+BreakBeforeBinaryOperators: All
+BreakBeforeTernaryOperators: true
+BreakTemplateDeclarations: No
+BreakConstructorInitializers: BeforeColon
+PackConstructorInitializers: CurrentLine
+BreakInheritanceList: BeforeColon
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowAllArgumentsOnNextLine: false
+BinPackParameters: false
+BinPackArguments: false
+PenaltyReturnTypeOnItsOwnLine: 200
+
+# Short constructs
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortLambdasOnASingleLine: Inline
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+AllowShortBlocksOnASingleLine: Never
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortEnumsOnASingleLine: false
+
+# Alignment
+AlignAfterOpenBracket: Align
+AlignOperands: AlignAfterOperator
+AlignTrailingComments: true
+AlignConsecutiveMacros: Consecutive
+AlignEscapedNewlines: Left
+
+# Braced init lists
+Cpp11BracedListStyle: false
+SpaceBeforeCpp11BracedList: true
+
+# Templates and concepts
+SpaceAfterTemplateKeyword: true
+RequiresClausePosition: OwnLine
+BreakBeforeConceptDeclarations: Always
+
+# Includes: main header, project, third-party, standard library
+SortIncludes: CaseSensitive
+IncludeBlocks: Regroup
+IncludeCategories:
+  - Regex: '^"'
+    Priority: 1
+  - Regex: '^<.*\.(h|hpp)>'
+    Priority: 2
+  - Regex: '^<[a-z_]+>'
+    Priority: 3
+
+# Whitespace and misc
+FixNamespaceComments: true
+ShortNamespaceLines: 0
+SeparateDefinitionBlocks: Always
+EmptyLineBeforeAccessModifier: LogicalBlock
+MaxEmptyLinesToKeep: 1
+KeepEmptyLinesAtTheStartOfBlocks: false
+InsertNewlineAtEOF: true
+SortUsingDeclarations: true
+SpaceAfterCStyleCast: false
